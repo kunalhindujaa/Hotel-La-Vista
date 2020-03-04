@@ -516,3 +516,12 @@ h6 {
   }
 }
 /* end of rooms fitler*/
+/* About Us Page */
+.about-us {
+  background: var(--darkGrey);
+  text-align: center;
+  padding: 5rem 0;
+}
+.about-us p {
+  margin: 50px;
+}
