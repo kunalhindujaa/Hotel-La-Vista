@@ -8,7 +8,7 @@ const Aboutus = () => {
   return (
     <React.Fragment>
       <Hero hero="roomsHero">
-        <Banner title="About Us" subtitle="At your Service, Since 1999">
+        <Banner title="Hotel La Vista" subtitle="At your Service, Since 1999">
           <Link to="/" className="btn-primary">
             Return Home
           </Link>
