@@ -134,7 +134,6 @@ h6 {
 .nav-links a:hover {
   color: var(--primaryColor);
 }
-
 .show-nav {
   height: 200px;
 }
@@ -524,4 +523,56 @@ h6 {
 }
 .about-us p {
   margin: 50px;
+}
+/*end of About Us Page*/
+/*Contact Page */
+.contact-div {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: var(--darkGrey);
+}
+.contact-div h5 {
+  font-size: 16px;
+  /* letter-spacing: var(--mainSpacing); */
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  color: #5f503a;
+}
+.div-line {
+  width: 5rem;
+  height: 5px;
+  margin: 0 auto;
+  background: var(--primaryColor);
+}
+.form-div {
+  margin: 25px;
+}
+.form-div label {
+  padding: 1px;
+  margin: 10px;
+  font-weight: bold;
+}
+.form-div input {
+  height: 35px;
+  width: 350px;
+  border-radius: 5px;
+}
+
+.form-div textarea {
+  border-radius: 5px;
+}
+
+.form-div table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-spacing: 20px 20px;
+}
+.form-div table td {
+  padding: 5px;
+}
+.form-div ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 18px;
 }

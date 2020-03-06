@@ -17,7 +17,7 @@ class Navbar extends Component {
         <div className="nav-center">
           <div className="nav-header">
             <Link to="/">
-              <img className="img" src={logo} alt="logo-image" />
+              <img className="img" src={logo} alt="hotel-logo" />
             </Link>
             <button
               type="button"

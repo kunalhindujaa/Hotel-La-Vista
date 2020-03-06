@@ -1,15 +1,15 @@
 import React, { Component } from "react";
+import Hero from "../components/Hero";
+import Banner from "../components/Banner";
+import { Link } from "react-router-dom";
+import ContactSupportIcon from "@material-ui/icons/ContactSupport";
 
 class Contact extends Component {
   state = {
-    name: " ",
+    name: "",
     phone: "",
     email: "",
-    listItem: "React",
-    gender: "",
-    check1: "No",
-    check2: "No",
-    registered: "No"
+    textArea: ""
   };
 
   handleChange = event => {
@@ -20,36 +20,92 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
-        <h4> Have query, please feel free to contact us</h4>
-        <h4>
-          Fill out the query form below, and we'll reach to you within 24 hours
-        </h4>
-        <form>
-          <label>Name</label>
-          <input
-            type="text"
-            name="userName"
-            value={this.state.name}
-            placeholder="Enter your name"
-            onChange={this.handleChange}
-          />
-          <label>Contact No</label>
-          <input
-            type="tel"
-            name="phone"
-            value={this.state.phone}
-            placeholder="Enter your Contact number"
-            onChange={this.handleChange}
-          />
-          <label>Email</label>
-          <input
-            type="email"
-            name={this.state.email}
-            placeholder="Your email address"
-          />
-        </form>
-      </div>
+      <React.Fragment>
+        <Hero hero="roomsHero">
+          <Banner title="Hotel La Vista" subtitle="At your Service, Since 1999">
+            <Link to="/" className="btn-primary">
+              Return Home
+            </Link>
+          </Banner>
+        </Hero>
+        <div className="contact-div">
+          <h5>
+            Have Query <ContactSupportIcon /> <br />
+            please feel free to contact us
+          </h5>
+          <h5>
+            Fill out the query form below, and we'll contact you within 24 hours
+          </h5>
+          <div className="div-line"></div>
+          <form className="form-div">
+            <table style={{ cellPadding: "25px" }}>
+              <tr>
+                <td>
+                  <label>Name</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="userName"
+                    value={this.state.name}
+                    placeholder="Enter your full name"
+                    onChange={this.handleChange}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Contact No</label>
+                </td>
+                <td>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={this.state.phone}
+                    placeholder="Enter your Contact number"
+                    onChange={this.handleChange}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Email</label>
+                </td>
+                <td>
+                  <input
+                    type="email"
+                    name={this.state.email}
+                    placeholder="Your email address"
+                    onChange={this.state.handleChange}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label> Your Query </label>
+                </td>
+                <td>
+                  <textarea
+                    rows="10"
+                    cols="50"
+                    name="textArea"
+                    value={this.state.textArea}
+                    placeholder="Enter your Query here"
+                    onChange={this.state.handleChange}
+                  />
+                </td>
+              </tr>
+            </table>
+          </form>
+          <form>
+            <div className="form-div">
+              <Link to="/" className="btn-primary">
+                Submit
+              </Link>
+            </div>
+          </form>
+        </div>
+      </React.Fragment>
     );
   }
 }
