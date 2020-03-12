@@ -9,7 +9,7 @@ class Contact extends Component {
     name: "",
     phone: "",
     email: "",
-    textArea: ""
+    query: ""
   };
 
   handleChange = event => {
@@ -46,7 +46,7 @@ class Contact extends Component {
                 <td>
                   <input
                     type="text"
-                    name="userName"
+                    name="name"
                     value={this.state.name}
                     placeholder="Enter your full name"
                     onChange={this.handleChange}
@@ -88,7 +88,7 @@ class Contact extends Component {
                   <textarea
                     rows="10"
                     cols="50"
-                    name="textArea"
+                    name="query"
                     value={this.state.textArea}
                     placeholder="Enter your Query here"
                     onChange={this.state.handleChange}
