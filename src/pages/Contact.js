@@ -9,7 +9,7 @@ class Contact extends Component {
   state = {
     name: "",
     phone: "",
-    mail: "",
+    email: "",
     query: ""
   };
 
@@ -23,7 +23,7 @@ class Contact extends Component {
     const queries = {
       name: this.state.name,
       phone: this.state.phone,
-      email: this.state.mail,
+      email: this.state.email,
       query: this.state.query
     };
     console.log(queries);
@@ -33,9 +33,24 @@ class Contact extends Component {
       .then(response => console.log(response))
       .catch(error => console.log(error));
 
-    alert("query booked");
+    alert(
+      "Thankyou for contacting us. Someone from our team will reach out to you within 2 working days."
+    );
+    this.setState({
+      name: "",
+      phone: "",
+      email: "",
+      query: ""
+    });
 
-    //alert("Name: " + this.state.name + "\n Contact: " + this.state.phone);
+    // alert(
+    //   "Name: " +
+    //     this.state.name +
+    //     "\nContact: " +
+    //     this.state.phone +
+    //     "\nEmail:" +
+    //     this.state.email
+    // );
     event.preventDefault();
   };
 
@@ -95,10 +110,10 @@ class Contact extends Component {
                 <td>
                   <input
                     type="email"
-                    name="mail"
-                    value={this.state.mail}
+                    name="email"
+                    value={this.state.email}
                     placeholder="Your email address"
-                    onChange={this.state.handleChange}
+                    onChange={this.handleChange}
                   />
                 </td>
               </tr>
@@ -113,7 +128,7 @@ class Contact extends Component {
                     name="query"
                     value={this.state.query}
                     placeholder="Enter your Query here"
-                    onChange={this.state.handleChange}
+                    onChange={this.handleChange}
                   />
                 </td>
               </tr>
