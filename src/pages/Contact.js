@@ -3,12 +3,13 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
+import axios from "../axios-query";
 
 class Contact extends Component {
   state = {
     name: "",
     phone: "",
-    email: "",
+    mail: "",
     query: ""
   };
 
@@ -16,6 +17,26 @@ class Contact extends Component {
     let name = event.target.name;
     let value = event.target.value;
     this.setState({ [name]: value });
+  };
+
+  sendQuery = event => {
+    const queries = {
+      name: this.state.name,
+      phone: this.state.phone,
+      email: this.state.mail,
+      query: this.state.query
+    };
+    console.log(queries);
+
+    axios
+      .post("/queries.json", queries)
+      .then(response => console.log(response))
+      .catch(error => console.log(error));
+
+    alert("query booked");
+
+    //alert("Name: " + this.state.name + "\n Contact: " + this.state.phone);
+    event.preventDefault();
   };
 
   render() {
@@ -74,7 +95,8 @@ class Contact extends Component {
                 <td>
                   <input
                     type="email"
-                    name={this.state.email}
+                    name="mail"
+                    value={this.state.mail}
                     placeholder="Your email address"
                     onChange={this.state.handleChange}
                   />
@@ -89,7 +111,7 @@ class Contact extends Component {
                     rows="10"
                     cols="50"
                     name="query"
-                    value={this.state.textArea}
+                    value={this.state.query}
                     placeholder="Enter your Query here"
                     onChange={this.state.handleChange}
                   />
@@ -99,9 +121,12 @@ class Contact extends Component {
           </form>
           <form>
             <div className="form-div">
-              <Link to="/" className="btn-primary">
+              {/* <Link to="/" className="btn-primary">
                 Submit
-              </Link>
+              </Link> */}
+              <button className="btn-primary" onClick={this.sendQuery}>
+                Submit
+              </button>
             </div>
           </form>
         </div>
