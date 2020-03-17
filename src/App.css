@@ -581,3 +581,16 @@ h6 {
   /* Chrome/Opera/Safari */
   font-size: 18px;
 }
+/*booking*/
+.book-section {
+  text-align: center;
+  display: block;
+  margin-bottom: 25px;
+}
+.btn-booking {
+  padding: 15px;
+}
+.booking-heading {
+  margin-top: 25px;
+  text-align: center;
+}

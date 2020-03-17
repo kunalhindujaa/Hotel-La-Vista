@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
-import axios from "../axios-query";
+import axios from "../axios-path";
 
 class Contact extends Component {
   state = {
@@ -87,7 +87,6 @@ class Contact extends Component {
                       value={this.state.name}
                       placeholder="Enter your full name"
                       onChange={this.handleChange}
-                      required
                     />
                   </td>
                 </tr>
@@ -142,16 +141,9 @@ class Contact extends Component {
                 </tr>
               </tbody>
             </table>
-          </form>
-          <form>
-            <div className="form-div">
-              {/* <Link to="/" className="btn-primary">
-                Submit
-              </Link> */}
-              <button className="btn-primary" onClick={this.sendQuery}>
-                Submit
-              </button>
-            </div>
+            <button className="btn-primary" onClick={this.sendQuery}>
+              Submit
+            </button>
           </form>
         </div>
       </React.Fragment>
