@@ -75,63 +75,72 @@ class Contact extends Component {
           <div className="div-line"></div>
           <form className="form-div">
             <table style={{ cellPadding: "25px" }}>
-              <tr>
-                <td>
-                  <label>Name</label>
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    name="name"
-                    value={this.state.name}
-                    placeholder="Enter your full name"
-                    onChange={this.handleChange}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label>Contact No</label>
-                </td>
-                <td>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={this.state.phone}
-                    placeholder="Enter your Contact number"
-                    onChange={this.handleChange}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label>Email</label>
-                </td>
-                <td>
-                  <input
-                    type="email"
-                    name="email"
-                    value={this.state.email}
-                    placeholder="Your email address"
-                    onChange={this.handleChange}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label> Your Query </label>
-                </td>
-                <td>
-                  <textarea
-                    rows="10"
-                    cols="50"
-                    name="query"
-                    value={this.state.query}
-                    placeholder="Enter your Query here"
-                    onChange={this.handleChange}
-                  />
-                </td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>
+                    <label>Name</label>
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="name"
+                      value={this.state.name}
+                      placeholder="Enter your full name"
+                      onChange={this.handleChange}
+                      required
+                    />
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>
+                    <label>Contact No</label>
+                  </td>
+                  <td>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={this.state.phone}
+                      placeholder="Enter your Contact number"
+                      onChange={this.handleChange}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>
+                    <label>Email</label>
+                  </td>
+                  <td>
+                    <input
+                      type="email"
+                      name="email"
+                      value={this.state.email}
+                      placeholder="Your email address"
+                      onChange={this.handleChange}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>
+                    <label> Your Query </label>
+                  </td>
+                  <td>
+                    <textarea
+                      rows="10"
+                      cols="50"
+                      name="query"
+                      value={this.state.query}
+                      placeholder="Enter your Query here"
+                      onChange={this.handleChange}
+                    />
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </form>
           <form>
