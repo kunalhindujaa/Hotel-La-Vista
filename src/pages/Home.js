@@ -10,7 +10,7 @@ const Home = () => {
     <React.Fragment>
       <Hero>
         <Banner
-          title="Hotel La Vista"
+          title="Hotell La Vista"
           subtitle="Stay at the finest hotels in India"
         >
           <Link to="/rooms" className="btn-primary">
