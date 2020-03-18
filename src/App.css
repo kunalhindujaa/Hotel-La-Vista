@@ -555,12 +555,12 @@ h6 {
 }
 .form-div label {
   padding: 1px;
-  margin: 10px;
+  margin: 8px;
   font-weight: bold;
 }
 .form-div input {
   height: 35px;
-  width: 350px;
+  width: 300px;
   border-radius: 5px;
 }
 
@@ -581,6 +581,14 @@ h6 {
   /* Chrome/Opera/Safari */
   font-size: 18px;
 }
+@media screen and (max-width: 580px) {
+  .form-div {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0px;
+  }
+}
+/*End of Contact Page*/
 /*booking*/
 .book-section {
   text-align: center;

@@ -131,7 +131,7 @@ class Contact extends Component {
                   <td>
                     <textarea
                       rows="10"
-                      cols="50"
+                      cols="40"
                       name="query"
                       value={this.state.query}
                       placeholder="Enter your Query here"
