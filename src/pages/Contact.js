@@ -67,7 +67,7 @@ class Contact extends Component {
         <div className="contact-div">
           <h5>
             Have Query <ContactSupportIcon /> <br />
-            please feel free to contact us
+            Please feel free to contact us
           </h5>
           <h5>
             Fill out the query form below, and we'll contact you within 24 hours
