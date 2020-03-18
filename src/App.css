@@ -587,6 +587,11 @@ h6 {
     max-width: 1170px;
     margin: 0px;
   }
+  .form-div input {
+    height: 35px;
+    width: 200px;
+    border-radius: 5px;
+  }
 }
 /*End of Contact Page*/
 /*booking*/

@@ -85,7 +85,7 @@ class Contact extends Component {
                       type="text"
                       name="name"
                       value={this.state.name}
-                      placeholder="Enter your full name"
+                      placeholder="Full name"
                       onChange={this.handleChange}
                     />
                   </td>
@@ -101,7 +101,7 @@ class Contact extends Component {
                       type="tel"
                       name="phone"
                       value={this.state.phone}
-                      placeholder="Enter your Contact number"
+                      placeholder="Contact number"
                       onChange={this.handleChange}
                     />
                   </td>
@@ -117,7 +117,7 @@ class Contact extends Component {
                       type="email"
                       name="email"
                       value={this.state.email}
-                      placeholder="Your email address"
+                      placeholder="Email address"
                       onChange={this.handleChange}
                     />
                   </td>
